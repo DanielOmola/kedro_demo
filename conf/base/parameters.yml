@@ -1,0 +1,5 @@
+url_tweeter_data: 'https://huggingface.co/datasets/osanseviero/twitter-airline-sentiment/resolve/main/Tweets.csv'
+
+test_ratio: 0.3
+
+n_splits_StratifiedKFold: 4
