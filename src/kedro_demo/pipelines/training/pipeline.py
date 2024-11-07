@@ -7,7 +7,8 @@ def create_pipeline(**kwargs):
         [
             node(
                 train_model,
-                ["X_train", "y_train", "X_test", "y_test", "params:n_splits_StratifiedKFold"],
+                ["X_train", "y_train", "X_test", "y_test",
+                  "params:n_splits_StratifiedKFold"],
                 "model"
             )
         ]

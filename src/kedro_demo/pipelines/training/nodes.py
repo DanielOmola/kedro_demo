@@ -28,8 +28,8 @@ stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
 # Authentification à Google Cloud avec la clé correspondant au compte de service MLflow
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.expanduser("~\OneDrive\Bureau\Lead DS\kedro-demo\conf\local\mlflow-key.json")
-
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.expanduser("~\OneDrive\Bureau\Lead DS\kedro-demo\conf\local\mlflow-key.json")
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv("MLFLOW_CREDENTIAL_PATH")
 # Set MLflow server uri
 MLFLOW_SERVER = os.getenv("MLFLOW_SERVER")
 mlflow.set_tracking_uri(MLFLOW_SERVER)
@@ -103,7 +103,7 @@ def train_model(
     """
 
     # Generate a list of classifiers models
-    models = model_builder.generate_model_list() # [nb,sgd, lr, rf ]
+    models = model_builder.generate_model_list()
     f1_score_list = []
     
     

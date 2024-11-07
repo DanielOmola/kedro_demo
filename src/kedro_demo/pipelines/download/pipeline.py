@@ -3,7 +3,6 @@ from kedro.pipeline.modular_pipeline import pipeline
 
 from .nodes import get_tweeter_raw_data
 
-
 def create_pipeline(**kwargs):
     return Pipeline(
         [

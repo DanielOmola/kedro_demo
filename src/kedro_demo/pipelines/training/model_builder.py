@@ -55,7 +55,6 @@ def build_pipeline_model(model:BaseEstimator, name:str):
     return model
 
 
-
 def build_model_dict(model:BaseEstimator, name:str, hpar:dict={}) -> dict:
     model_dict = {
         'model': build_pipeline_model(model=model, name=name),
@@ -126,5 +125,6 @@ def generate_model_list()-> list:
 
     
     
-    model_list = [nb, sgd, lr, rf, knn, xgb, adaboost]
+    # model_list = [nb, sgd, lr, rf, knn, xgb, adaboost]
+    model_list = [nb, sgd, lr, rf, xgb, adaboost]
     return model_list

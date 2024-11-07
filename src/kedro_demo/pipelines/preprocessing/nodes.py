@@ -78,6 +78,5 @@ def lemmatize_text(text:str)->list:
 
 def clean_tweeter_data(tweeter_raw_data:pd.DataFrame)->pd.DataFrame:
     tweeter_raw_data.text = tweeter_raw_data.text.apply(clean)
-    # tweeter_raw_data.text = tweeter_raw_data.text.apply(lemmatize_text)
     return tweeter_raw_data
 
